@@ -1,13 +1,9 @@
 from collatz import generate_collatz_sequence
 
 import matplotlib.pyplot as plt
-from tqdm import tqdm
 import numpy as np
 
 def generate_plot_path_lengths(range_n: list, path_len_list: list, batch_size: int = 10000):
-    # Convert path length list to a numpy array
-    path_len_arr = np.array(path_len_list)
-
     # Calculate the mean and standard deviation
     mean, std = np.mean(path_len_list), np.std(path_len_list)
     std_positive = mean + std
