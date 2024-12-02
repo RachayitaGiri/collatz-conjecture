@@ -5,7 +5,7 @@ from tqdm import tqdm
 import numpy as np
 from collections import Counter
 
-def generate_plot_multiplicities(range_n: list, path_len_list: list):
+def generate_plot_multiplicities(path_len_list: list):
     # Calculate the path length frequencies and store as a dictionary --> len: freq(len)
     path_len_freqs = Counter(path_len_list)
     
@@ -48,4 +48,4 @@ if __name__ == '__main__':
     path_len_list = [generate_collatz_sequence(n) for n in range_n]
     
     print("\nGenerating plot for path length multiplicities (frequencies)...")
-    generate_plot_multiplicities(range_n, path_len_list)
+    generate_plot_multiplicities(path_len_list)
